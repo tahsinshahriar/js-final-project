@@ -17,3 +17,16 @@ depositBtn.addEventListener("click", function(){
     document.getElementById("total-balance").innerHTML = totalBalance + depositAmmount;
     document.getElementById("deposit-amt").value = "";
 })
+
+//withdraw button event
+const withdrawBtn = document.getElementById("withdraw-btn");
+withdrawBtn.addEventListener("click",function(){
+    const withdrawAmt = parseFloat(document.getElementById("withdraw-amt").value);
+    const currWithdraw = parseFloat(document.getElementById("curr-withdraw").innerHTML);
+    const totalBalance = parseFloat(document.getElementById("total-balance").innerHTML);
+    document.getElementById("curr-withdraw").innerHTML = currWithdraw + withdrawAmt;
+    document.getElementById("total-balance").innerHTML = totalBalance - withdrawAmt;
+    document.getElementById("withdraw-amt").value = "";
+
+})
+
